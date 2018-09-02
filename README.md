@@ -1,2 +1,2 @@
-# node-mongo
-Practice with mongo
+# node-Express Generator REST API
+Practice with Express Generator REST API
