@@ -65,14 +65,15 @@ promoRouter.route('/:promoId')
 		res.statusCode = 200;
 		res.setHeader('Content-type', 'application/json');
 		res.json(promotion);
-	}, (err) => next(err));
+	}, (err) => next(err))
+	.catch((err) => next(err));
 })
 .delete((req, res, next) => {
 	Promotions.findByIdAndRemove(req.params.promoId)
 	.then((resp) => {
 		res.statusCode = 200;
 		res.setHeader('Content-type', 'application/json');
-		res.json(resp)
+		res.json(resp);
 	}, (err) => next(err))
 	.catch((err) => next(err));
 });
